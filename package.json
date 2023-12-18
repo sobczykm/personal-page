@@ -1,0 +1,9 @@
+{
+  "name": "personal-page",
+  "version": "1.0.0",
+  "description": "Personal page & blog",
+  "repository": "https://github.com/sobczykm/personal-page.git",
+  "author": "Mateusz Sobczyk <mateusz@sobczyk.dev>",
+  "license": "non-licensed",
+  "private": false
+}
