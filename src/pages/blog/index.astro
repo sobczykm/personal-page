@@ -6,6 +6,7 @@ const description = 'Latest articles.';
 const permalink = `${Astro.site.href}blog`;
 
 let allPosts = await Astro.glob('../../data/blog-posts/*.md');
+allPosts = allPosts.filter(post => post.frontmatter.hidden !== true);
 allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf() - new Date(a.frontmatter.publishDate).valueOf());
 ---
 
@@ -14,14 +15,24 @@ allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf()
     <h1>Blog</h1>
     {allPosts.map((post, index) => {
       const href = `/blog/${post.file.split('/').pop().split('.').shift()}`;
+      const description = (() => {
+        const initDescription = post.frontmatter.description;
+
+        if (initDescription.length > 200) {
+          return initDescription.substring(0, 200) + '...';
+        }
+
+        return initDescription;
+      })()
       return (
         <div>
           { index !== 0 && <hr /> }
           <div class="post-item">
+            <img class="post-image" src={post.frontmatter.image}>
             <h2>
               <a href={href}>{post.frontmatter.title}</a>
             </h2>
-            <p>{post.frontmatter.description}</p>
+            <p>{description}</p>
             <div class="post-item-footer">
               <span class="post-item-date">— {post.frontmatter.publishDate}</span>
             </div>
@@ -48,5 +59,11 @@ allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf()
 
   hr {
     margin: 60px auto;
+  }
+
+  .post-image{
+    max-height: 200px;
+    width: 100%;
+    object-fit: cover;
   }
 </style>
