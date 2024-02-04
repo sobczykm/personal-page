@@ -13,6 +13,11 @@ Don't get me wrong - python ecosystem is great. It has robust libraries for almo
 The only thing they are not so good at is *teaching you what is actually happening under the hood*. Unless you're already an *expert* in the field, without understanding the basics, you might get lost in the sea. The temtation to just use the library and move on is strong, but it's not the best approach. *Understanding the logic* behind the code is crucial for a good understanding of the problem and for building a solid foundation for future learning.
 
 # The (basic) Theory
+> This is a very basic theoretical explanation to linear algebra. It is not meant to be a comprehensive guide. It is just a starting point for anyone who is interested in the topic and wants to understand the code.
+
+> Useful materials:
+> - [Determinant](https://en.wikipedia.org/wiki/Determinant)
+> - [Laplace expansion](https://en.wikipedia.org/wiki/Laplace_expansion)
 
 ## What is a matrix?
 
