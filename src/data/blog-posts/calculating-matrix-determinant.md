@@ -12,7 +12,7 @@ Don't get me wrong - python ecosystem is great. It has robust libraries for almo
 
 The only thing they are not so good at is *teaching you what is actually happening under the hood*. Unless you're already an *expert* in the field, without understanding the basics, you might get lost in the sea. The temtation to just use the library and move on is strong, but it's not the best approach. *Understanding the logic* behind the code is crucial for a good understanding of the problem and for building a solid foundation for future learning.
 
-# The Theory
+# The (basic) Theory
 
 ## What is a matrix?
 
@@ -100,3 +100,10 @@ print(calculate_determinant(matrix))
 
 # Output: 13
 ```
+
+## Conclusion
+
+That shows a rather simple way to calculate the determinant of a `nxn` matrix. 
+Anyone who has ever worked with the Big O notation probably already has a red alert going off in their head. This is definitely not the most efficient way to calculate this. But it's a good start.
+
+> For anyone who is interested in the Big O notation, I would recommend reading about the `LU decomposition` method.
