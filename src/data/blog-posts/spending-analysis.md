@@ -3,6 +3,7 @@ title: Unlocking Financial Insights with Go; A Deep Dive into Spending Analysis.
 publishDate: 20 Jan 2024
 description: Dive into the world of spending analysis with Go. In this article, we'll explore how to leverage Go to unlock financial insights from your bank statements. We'll cover how to parse bank statements, how to extract insights from them, and how to visualize those insights.
 image: /assets/blog/analysis.jpeg
+hidden: true
 ---
 
 ![Photo of dashboard containing some analysis](/assets/blog/analysis.jpeg)
